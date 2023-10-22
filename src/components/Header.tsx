@@ -22,8 +22,8 @@ const Header = () => {
           width={35}
           src={
             isLightMode
-              ? "src/assets/veloci-logo-dark.svg"
-              : "src/assets/veloci-logo-light.svg"
+              ? "icons/veloci-logo-dark.svg"
+              : "icons/veloci-logo-light.svg"
           }
         ></img>
       </a>
@@ -39,14 +39,14 @@ const Header = () => {
             aria-label="dark-mode"
             alt="dark-mode"
             width={18}
-            src="src/assets/dark.svg"
+            src="icons/dark.svg"
           ></img>
         ) : (
           <img
             aria-label="light-mode"
             alt="light-mode"
             width={18}
-            src="src/assets/light.svg"
+            src="icons/light.svg"
           ></img>
         )}
       </button>

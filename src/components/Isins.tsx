@@ -226,7 +226,7 @@ const Isins = () => {
                   >
                     <img
                       alt="chart"
-                      src="src/assets/chart.svg"
+                      src="icons/chart.svg"
                       width={18}
                       aria-label="chart"
                     ></img>
@@ -240,7 +240,7 @@ const Isins = () => {
                   >
                     <img
                       alt="unsubscribe"
-                      src="src/assets/delete.svg"
+                      src="icons/delete.svg"
                       width={18}
                       aria-label="unsubscribe"
                     ></img>
