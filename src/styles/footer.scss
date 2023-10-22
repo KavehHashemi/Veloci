@@ -1,0 +1,35 @@
+@import 'variables';
+
+footer[id="Connecting"] {
+    @extend %footer-container;
+    background-color: $--color-primary-blue1;
+}
+
+footer[id="Open"] {
+    @extend %footer-container;
+    background-color: $--color-primary-green2
+}
+
+footer[id="Closed"] {
+    @extend %footer-container;
+    background-color: $--color-primary-red4
+}
+
+.info {
+    justify-content: start;
+}
+
+.connection-status {
+    display: inline-block;
+    margin-inline: 1rem;
+}
+
+.message {
+    display: inline-block;
+    margin-inline: 1rem;
+    padding-inline: 2rem;
+    // background-color: $--color-primary-red4;
+    color: crimson;
+    background-color: White;
+
+}

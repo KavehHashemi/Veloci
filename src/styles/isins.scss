@@ -1,0 +1,84 @@
+@import 'variables';
+
+%isins-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    height: calc(100vh - 7.5rem - 1px);
+}
+
+%isins-subscribe {
+    padding-block: 1rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 80vw;
+
+    @media(max-width:950px) {
+        width: 95vw;
+    }
+}
+
+%isins-table {
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 80vw;
+
+    @media(max-width:950px) {
+        width: 95vw;
+    }
+}
+
+.isins-container {
+    @extend %isins-container;
+    background-color: $--color-background1;
+    color: whitesmoke
+}
+
+.isins-container-l {
+    @extend %isins-container;
+    background-image: linear-gradient(to right bottom, #f5f5f5, #f5f5f7, #f4f6f8, #f2f7f9, #f0f8f9, #eef7f8, #ecf7f8, #eaf6f7, #e8f3f7, #e7f0f6, #e6edf4, #e7e9f2);
+}
+
+
+.isins-subscribe {
+    @extend %isins-subscribe;
+    border: 1px solid #666;
+}
+
+.isins-subscribe-l {
+    @extend %isins-subscribe;
+    background-color: whitesmoke;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 18px 0px rgba(0, 0, 0, 0.12),
+}
+
+.isins-table {
+    @extend %isins-table;
+    border: 1px solid #666;
+}
+
+.isins-table-l {
+    @extend %isins-table;
+    background-color: whitesmoke;
+    border: 1px solid #e5e5e5;
+}
+
+td {
+    border-collapse: collapse;
+    width: 200px;
+    text-align: center;
+
+    &[id="func"] {
+        width: 80px
+    }
+}
+
+.responsive {
+
+    @media (max-width:800px) {
+        display: none;
+    }
+}

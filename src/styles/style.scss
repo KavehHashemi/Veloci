@@ -1,0 +1,137 @@
+@use 'isins';
+@use 'footer';
+@use 'header';
+@use 'chart';
+@import "variables";
+
+
+@font-face {
+    font-family: DIN Next TR Regular;
+    src: url(/fonts/DINNextLTPro-Regular.woff) format('woff'), url(/fonts/DINNextLTPro-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: DIN Next TR Medium;
+    src: url(/fonts/DINNextLTPro-Medium.woff) format('woff'), url(/fonts/DINNextLTPro-Medium.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: DIN Next TR Bold;
+    src: url(/fonts/DINNextLTPro-Bold.woff) format('woff'), url(/fonts/DINNextLTPro-Bold.woff2) format('woff2');
+}
+
+
+body {
+    margin: 0;
+    font-family: $--font-regular;
+    line-height: 1.5;
+    font-weight: 250;
+    min-width: 320px;
+    // min-height: 100dvh;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+%a {
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    text-decoration: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.a {
+    @extend %a;
+    @extend %button;
+    color: #646cff;
+    border: 1px solid transparent;
+    background-color: #1a1a1a;
+
+    &:hover {
+        border-color: #646cff;
+    }
+}
+
+.a-l {
+    @extend %a;
+    @extend %button;
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: #535bf2;
+}
+
+
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+%button {
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.25s;
+
+    &[id="unsubscribe"] {
+        color: #dc143c
+    }
+
+    @media(max-width:480px) {
+        padding: 4px;
+    }
+}
+
+.button {
+    @extend %button;
+    border: 1px solid transparent;
+    background-color: #1a1a1a;
+    color: $--color-foreground3;
+
+    &:hover {
+        border-color: #646cff;
+    }
+}
+
+.button-l {
+    @extend %button;
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: #535bf2;
+
+
+}
+
+%input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    height: 2rem;
+    width: 80%;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.input[type="text"] {
+    @extend %input;
+    color: whitesmoke;
+}
+
+.input-l[type="text"] {
+    @extend %input;
+    color: #1a1a1a;
+}
