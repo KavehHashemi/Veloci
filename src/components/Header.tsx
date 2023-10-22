@@ -17,9 +17,16 @@ const Header = () => {
       aria-label="navbar"
       className={isLightMode ? "navbar-l" : "navbar"}
     >
-      {/* <a aria-label="home" href="/" style={{ display: "flex" }}>
-       
-      </a> */}
+      <a aria-label="home" href="/" style={{ display: "flex" }}>
+        <img
+          width={35}
+          src={
+            isLightMode
+              ? "src/assets/veloci-logo-dark.svg"
+              : "src/assets/veloci-logo-light.svg"
+          }
+        ></img>
+      </a>
       {currentISIN ? <h4 aria-label="current-ISIN">{currentISIN}</h4> : null}
       <button
         data-testid="switch"
@@ -32,14 +39,14 @@ const Header = () => {
             aria-label="dark-mode"
             alt="dark-mode"
             width={18}
-            src="public/icons/dark.svg"
+            src="src/assets/dark.svg"
           ></img>
         ) : (
           <img
             aria-label="light-mode"
             alt="light-mode"
             width={18}
-            src="public/icons/light.svg"
+            src="src/assets/light.svg"
           ></img>
         )}
       </button>

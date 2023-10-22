@@ -159,16 +159,29 @@ const Isins = () => {
               <td id="func"></td>
             </tr>
           ) : (
-            <tr
-              style={{
-                textAlign: "center",
-                textTransform: "uppercase",
-                color: "#646cff",
-              }}
-            >
-              <td>Add a new instrument to begin!</td>
-            </tr>
+            <>
+              <tr
+                style={{
+                  textAlign: "center",
+                  textTransform: "uppercase",
+                  color: "#646cff",
+                }}
+              >
+                <td>Add a new instrument to begin!</td>
+              </tr>
+              <tr>
+                <td>
+                  <sub>
+                    An ISIN is a 12-character alphanumeric code. It consists of
+                    three parts: A two letter country code, a nine character
+                    alpha-numeric national security identifier, and a single
+                    check digit. Example:- US0378331005.
+                  </sub>
+                </td>
+              </tr>
+            </>
           )}
+
           {/* here we create a row for each subscribed intrument */}
           {isins.map((singleSubscribedISIN, i) => {
             return (
@@ -213,7 +226,7 @@ const Isins = () => {
                   >
                     <img
                       alt="chart"
-                      src="public/icons/chart.svg"
+                      src="src/assets/chart.svg"
                       width={18}
                       aria-label="chart"
                     ></img>
@@ -227,7 +240,7 @@ const Isins = () => {
                   >
                     <img
                       alt="unsubscribe"
-                      src="public/icons/delete.svg"
+                      src="src/assets/delete.svg"
                       width={18}
                       aria-label="unsubscribe"
                     ></img>
