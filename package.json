@@ -1,5 +1,6 @@
 {
-  "name": "Veloci",
+  "name": "veloci",
+  "homepage": "http://kavehhashemi.github.io/veloci",
   "private": true,
   "Author": "Kaveh Hashemi",
   "version": "0.0.0",
@@ -9,7 +10,9 @@
     "build": "tsc && vite build",
     "preview": "concurrently \"node server.mjs\" \"vite preview\"",
     "test": "jest",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
@@ -36,6 +39,7 @@
     "eslint": "^8.44.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
+    "gh-pages": "^6.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
