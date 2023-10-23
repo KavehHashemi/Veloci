@@ -12,11 +12,14 @@ function App() {
   const dispatch = useAppDispatch();
   dispatch(initiateLocalStorage());
 
-  // const { readyState } = useWebSocket("ws://localhost:8425/", {
-  const { readyState } = useWebSocket("wss://veloci.netlify.app:8425", {
+  const { readyState } = useWebSocket("ws://localhost:8425/", {
+    // const { readyState } = useWebSocket("ws://veloci.netlify.app:8425", {
     //here we connect to the websocket and pass down the connection status to footer component
     onOpen: (event) => {
       console.log("WebSocket connection established.");
+      console.log(event);
+    },
+    onMessage: (event) => {
       console.log(event);
     },
     onError: (err) => {
