@@ -2,7 +2,7 @@
 
 ## About
 
-This is a sample web-app for displaying instant exchange asset prices.
+This is a sample web-app for displaying instant (dummy) exchange prices using websocket.
 
 ## Stack
 
