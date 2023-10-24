@@ -11,11 +11,8 @@ import Chart from "./components/Chart";
 function App() {
   const dispatch = useAppDispatch();
   dispatch(initiateLocalStorage());
-  // ("https://veloci.netlify.app");
-  // ("ws://veloci.netlify.app");
-  // const url = window.document.location.origin;
-  const { readyState } = useWebSocket("ws://veloci.netlify.app:8425/", {
-    // const { readyState } = useWebSocket("ws://veloci.netlify.app:8425", {
+
+  const { readyState } = useWebSocket("ws://localhost:8425/", {
     //here we connect to the websocket and pass down the connection status to footer component
     onOpen: (event) => {
       console.log("WebSocket connection established.");

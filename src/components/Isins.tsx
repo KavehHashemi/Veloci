@@ -251,6 +251,13 @@ const Isins = () => {
           })}
         </tbody>
       </table>
+      {isins.length > 0 ? (
+        <sub style={{ color: "coral" }}>
+          * These prices are dummy numbers which are generated randomly.
+        </sub>
+      ) : (
+        <></>
+      )}
     </section>
   );
 };
